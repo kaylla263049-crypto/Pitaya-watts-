@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pitaya-watts</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <main
+        id="login"
+        class="tela ativa"
+    >
+
+        <div class="conteudo">
+
+            <img
+                src="pitaya.png"
+                class="pitaya"
+                alt="Mascote Pitaya"
+            >
+
+            <h1>Pitaya-watts 🌸</h1>
+
+            <p class="subtitulo">
+                Cuide da sua energia de um jeito inteligente.
+            </p>
+
+
+            <div class="card">
+
+                <h2>Entrar</h2>
+
+
+                <label>E-mail</label>
+
+                <input
+                    type="email"
+                    id="emailLogin"
+                    placeholder="seu@email.com"
+                >
+
+
+                <label>Senha</label>
+
+                <input
+                    type="password"
+                    id="senhaLogin"
+                    placeholder="Sua senha"
+                >
+
+
+                <button onclick="entrar()">
+                    Entrar 🌸
+                </button>
+
+
+                <p class="link">
+
+                    Não tem uma conta?
+
+                    <button
+                        type="button"
+                        class="botao-link"
+                        onclick="mostrarTela('cadastro')"
+                    >
+                        Cadastre-se
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         CADASTRO
+    ========================== -->
+
+    <main
+        id="cadastro"
+        class="tela"
+    >
+
+        <div class="conteudo">
+
+            <button
+                type="button"
+                class="voltar"
+                onclick="mostrarTela('login')"
+            >
+                ← Voltar
+            </button>
+
+
+            <img
+                src="pitaya.png"
+                class="pitaya pequena"
+                alt="Mascote Pitaya"
+            >
+
+
+            <h1>Criar conta 🌸</h1>
+
+            <p class="subtitulo">
+                Vamos criar sua conta no Pitaya-watts.
+            </p>
+
+
+            <div class="card">
+
+                <label>Seu nome</label>
+
+                <input
+                    type="text"
+                    id="nomeCadastro"
+                    placeholder="Como podemos te chamar?"
+                >
+
+
+                <label>E-mail</label>
+
+                <input
+                    type="email"
+                    id="emailCadastro"
+                    placeholder="seu@email.com"
+                >
+
+
+                <label>Senha</label>
+
+                <input
+                    type="password"
+                    id="senhaCadastro"
+                    placeholder="Crie uma senha"
+                >
+
+
+                <label>Confirmar senha</label>
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Digite a senha novamente"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="cadastrar()"
+                >
+                    Criar minha conta 💗
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+    <!-- =========================
+         BOAS-VINDAS
+    ========================== -->
+
+    <main
+        id="boasVindas"
+        class="tela"
+    >
+
+        <div class="conteudo">
+
+            <img
+                src="pitaya.png"
+                class="pitaya pequena"
+                alt="Mascote Pitaya"
+            >
+
+
+            <h1>Bem-vindo! 🌸</h1>
+
+            <p class="subtitulo">
+                Sua conta foi criada com sucesso!
+            </p>
+
+
+            <button
+                type="button"
+                onclick="entrarNoApp()"
+            >
+                Ir para o Pitaya-watts ⚡
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         INÍCIO / PAINEL
+    ========================== -->
+    
+<main id="inicio" class="tela">
+
+    <div class="conteudo">
+
+        <!-- CARTÃO DA PITAYA -->
+
+        <div class="card card-pitaya">
+
+            <img
+                src="pitaya2.png"
+                class="pitaya-cartao"
+                alt="Mascote-Pitaya"
+            >
+
+            <div>
+                <h2>🌸 Pitaya-watts</h2>
+
+                <p>
+                    Olá! Eu sou a Pitaya! 💗
+                </p>
+
+                <p>
+                    Vou te ajudar a acompanhar
+                    seu consumo de energia.
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+            <!-- APARELHOS -->
+
+            <div class="card">
+
+                <h2>⚡ Meus aparelhos</h2>
+
+                <div id="listaAparelhos">
+
+                    <p>
+                        Nenhum aparelho cadastrado ainda. 🌸
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMO -->
+
+            <div class="card">
+
+                <h2>
+                    ⚡ Pitaya-watts
+                </h2>
+
+                <p>
+                    Seu painel de consumo está pronto!
+                </p>
+
+
+                <p>
+                    <strong>Total de consumo:</strong>
+                </p>
+
+                <p id="totalConsumo">
+                    0,00 kWh/mês
+                </p>
+
+
+                <p>
+                    <strong>Custo estimado:</strong>
+                </p>
+
+                <p id="custoTotal">
+                    R$ 0,00
+                </p>
+
+
+                <p id="avisoMeta"></p>
+<div class="barra-meta">
+    <div
+        id="progressoMeta"
+        class="progresso-meta"
+    ></div>
+</div>
+
+<p id="textoProgresso">
+    Nenhuma meta definida.
+</p>
+
+</div>
+
+
+            <!-- TARIFA -->
+
+            <div class="card">
+
+                <h2>💰 Tarifa de energia</h2>
+
+                <label>
+                    Valor do kWh
+                </label>
+
+                <input
+                    type="number"
+                    id="tarifa"
+                    placeholder="Ex: 0.90"
+                    min="0"
+                    step="0.01"
+                >
+
+                <button
+                    type="button"
+                    onclick="salvarTarifa()"
+                >
+                    Salvar tarifa 💰
+                </button>
+
+            </div>
+
+
+            <!-- META -->
+
+            <div class="card">
+
+                <h2>🎯 Minha meta</h2>
+
+                <label>
+                    Meta mensal em kWh
+                </label>
+
+                <input
+                    type="number"
+                    id="meta"
+                    placeholder="Ex: 100"
+                    min="0"
+                    step="0.01"
+                >
+
+                <button
+                    type="button"
+                    onclick="salvarMeta()"
+                >
+                    Salvar meta 🎯
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                onclick="mostrarTela('adicionar')"
+            >
+                ➕ Adicionar aparelho
+            </button>
+
+
+            <button
+                type="button"
+                class="botao-secundario"
+                onclick="sair()"
+            >
+                Sair da conta
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         ADICIONAR APARELHO
+    ========================== -->
+
+    <main
+        id="adicionar"
+        class="tela"
+    >
+
+        <div class="conteudo">
+
+            <button
+                type="button"
+                class="voltar"
+                onclick="mostrarTela('inicio')"
+            >
+                ← Voltar
+            </button>
+
+
+            <h1>
+                Adicionar aparelho ⚡
+            </h1>
+
+
+            <p class="subtitulo">
+                Vamos descobrir quanto ele consome.
+            </p>
+
+
+            <div class="card">
+
+                <label>
+                    Nome do aparelho
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeAparelho"
+                    placeholder="Ex: Ventilador"
+                >
+
+
+                <label>
+                    Potência (W)
+                </label>
+
+                <input
+                    type="number"
+                    id="potenciaAparelho"
+                    placeholder="Ex: 100"
+                    min="0"
+                >
+
+
+                <label>
+                    Horas de uso por dia
+                </label>
+
+                <input
+                    type="number"
+                    id="horasAparelho"
+                    placeholder="Ex: 5"
+                    min="0"
+                    step="0.5"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="adicionarAparelho()"
+                >
+                    Adicionar aparelho 🌸
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+<script src="script.js"></script>
+</body>
+
+              </html>
