@@ -1,0 +1,565 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #fff0f7;
+
+    color: #5c2440;
+}
+
+
+.tela {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+}
+
+
+.tela.ativa {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.conteudo {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+}
+
+
+.pitaya {
+    width: 164px;
+    height: 164px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+.pitaya.pequena {
+    width: 164px;
+    height: 164px;
+}
+
+h1 {
+    color: #d83b7d;
+
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    color: #d83b7d;
+}
+
+
+.subtitulo {
+    color: #8a526c;
+
+    margin-bottom: 25px;
+}
+
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(150, 50, 100, 0.12);
+
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+
+    text-align: left;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+}
+
+
+input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #f2b5cf;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+input:focus {
+    border-color: #d83b7d;
+}
+
+
+button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 16px;
+
+    padding: 15px;
+
+    margin-top: 18px;
+
+    background: #d83b7d;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+.botao-link {
+    width: auto;
+
+    padding: 0;
+
+    margin: 0;
+
+    background: transparent;
+
+    color: #d83b7d;
+
+    font-size: inherit;
+
+    display: inline;
+}
+
+
+.voltar {
+    background: #f5b4d0;
+
+    color: #6b2747;
+
+    margin-bottom: 20px;
+}
+
+
+.botao-secundario {
+    background: #f5b4d0;
+
+    color: #6b2747;
+}
+
+
+.link {
+    margin-top: 20px;
+
+    color: #7c5064;
+}
+
+
+.mensagem {
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+
+.mensagem.erro {
+    background: #ffe0e8;
+
+    color: #b4234d;
+}
+
+
+.mensagem.sucesso {
+    background: #e3f8e9;
+
+    color: #24723b;
+}
+/* ========================================
+   APARELHOS
+======================================== */
+
+.aparelho {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    background: #fff4f9;
+
+    border-radius: 18px;
+
+    border: 1px solid #f4c5d9;
+}
+
+
+.aparelho-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: left;
+
+    flex: 1;
+}
+
+
+.icone-aparelho {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffd9e9;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+}
+
+
+.aparelho strong {
+
+    color: #d83b7d;
+
+    font-size: 16px;
+}
+
+
+.aparelho small {
+
+    color: #80566a;
+
+    font-size: 13px;
+}
+
+
+.botao-excluir {
+
+    width: 45px;
+
+    height: 45px;
+
+    padding: 0;
+
+    margin: 0;
+
+    background: #ffe0e8;
+
+    color: #b4234d;
+
+    font-size: 18px;
+
+    border-radius: 12px;
+}
+/* =========================
+   CARTÃO DA PITAYA
+========================= */
+
+.card-pitaya {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.pitaya-cartao {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.card-pitaya h2 {
+    margin-top: 0;
+}
+
+.card-pitaya p {
+    margin: 6px 0;
+}
+/* ========================================
+   ✨ ACABAMENTO DO PITAYA-WATTS
+======================================== */
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Botões */
+
+button {
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+button:hover {
+    box-shadow: 0 6px 15px rgba(216, 59, 125, 0.20);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* Cartão da Pitaya */
+
+.card-pitaya {
+    border: 2px solid #ffd3e5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fff5fa
+        );
+}
+
+
+/* Cartões comuns */
+
+.card h2 {
+    margin-top: 0;
+}
+
+
+/* Aparelhos */
+
+.aparelho {
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.aparelho:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(150, 50, 100, 0.10);
+}
+
+
+/* Ícone do aparelho */
+
+.icone-aparelho {
+    border: 2px solid #ffc5dd;
+}
+
+
+/* Botão excluir */
+
+.botao-excluir {
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.botao-excluir:hover {
+    background: #ffc9d9;
+    transform: scale(1.05);
+}
+
+
+/* Campos */
+
+input {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus {
+    box-shadow:
+        0 0 0 3px rgba(216, 59, 125, 0.10);
+}
+
+
+/* Aviso da meta */
+
+#avisoMeta {
+    padding: 10px;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+/* ========================================
+   🎯 BARRA DE PROGRESSO DA META
+======================================== */
+
+.barra-meta {
+    width: 100%;
+    height: 18px;
+
+    background: #ffe1ed;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.progresso-meta {
+    width: 0%;
+
+    height: 100%;
+
+    background: #d83b7d;
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+#textoProgresso {
+    color: #8a526c;
+
+    font-weight: bold;
+
+    margin-top: 8px;
+}
+
+#login .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login .conteudo h1 {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* 🌸 Alinhamento da Pitaya e título no login */
+
+#login .pitaya {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login h1 {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 🌸 Aproximar a Pitaya do título no login */
+
+#login .pitaya {
+    margin-bottom: -5px;
+}
+
+#login h1 {
+    margin-top: 0;
+    text-align: center;
+}
+.botoes-aparelho {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-editar,
+.btn-excluir {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    border-radius: 12px;
+}
+
+.btn-editar {
+    background: #ffd9e9;
+    color: #d83b7d;
+}
+/* ========================================
+   🌸 AJUSTE DA TELA INICIAL
+======================================== */
+
+/* ========================================
+   🌸 POSIÇÃO DA TELA INICIAL
+======================================== */
+
+/* 🌸 POSIÇÃO DA TELA INICIAL */
+
+/* ========================================
+   🌸 POSIÇÃO DA TELA INICIAL
+======================================== */
+
+#inicio {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#inicio .conteudo {
+    padding-top: 0;
+    margin-top: 0;
+}
+.pitaya-cartao {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
